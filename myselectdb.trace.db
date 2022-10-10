@@ -1,0 +1,21 @@
+2022-10-10 20:27:15 jdbc[13]: 
+org.h2.message.DbException: Syntax error in SQL statement "SET OLD_INFORMATION_SCHEMA[*] TRUE"; expected "@, AUTOCOMMIT, EXCLUSIVE, IGNORECASE, PASSWORD, SALT, MODE, COMPRESS_LOB, DATABASE, COLLATION, BINARY_COLLATION, UUID_COLLATION, CLUSTER, DATABASE_EVENT_LISTENER, ALLOW_LITERALS, DEFAULT_TABLE_TYPE, CREATE, HSQLDB.DEFAULT_TABLE_TYPE, PAGE_STORE, CACHE_TYPE, FILE_LOCK, DB_CLOSE_ON_EXIT, AUTO_SERVER, AUTO_SERVER_PORT, AUTO_RECONNECT, ASSERT, ACCESS_MODE_DATA, OPEN_NEW, JMX, PAGE_SIZE, RECOVER, NAMES, SCOPE_GENERATED_KEYS, SCHEMA, CATALOG, DATESTYLE, SEARCH_PATH, SCHEMA_SEARCH_PATH, JAVA_OBJECT_SERIALIZER, IGNORE_CATALOGS, SESSION, TRANSACTION, LOGSIZE, FOREIGN_KEY_CHECKS" [42001-200]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:1053)
+	at org.h2.command.Parser.parseSet(Parser.java:7411)
+	at org.h2.command.Parser.parsePrepared(Parser.java:987)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:819)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:168)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET OLD_INFORMATION_SCHEMA[*] TRUE"; expected "@, AUTOCOMMIT, EXCLUSIVE, IGNORECASE, PASSWORD, SALT, MODE, COMPRESS_LOB, DATABASE, COLLATION, BINARY_COLLATION, UUID_COLLATION, CLUSTER, DATABASE_EVENT_LISTENER, ALLOW_LITERALS, DEFAULT_TABLE_TYPE, CREATE, HSQLDB.DEFAULT_TABLE_TYPE, PAGE_STORE, CACHE_TYPE, FILE_LOCK, DB_CLOSE_ON_EXIT, AUTO_SERVER, AUTO_SERVER_PORT, AUTO_RECONNECT, ASSERT, ACCESS_MODE_DATA, OPEN_NEW, JMX, PAGE_SIZE, RECOVER, NAMES, SCOPE_GENERATED_KEYS, SCHEMA, CATALOG, DATESTYLE, SEARCH_PATH, SCHEMA_SEARCH_PATH, JAVA_OBJECT_SERIALIZER, IGNORE_CATALOGS, SESSION, TRANSACTION, LOGSIZE, FOREIGN_KEY_CHECKS"; SQL statement:
+SET OLD_INFORMATION_SCHEMA TRUE [42001-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 14 more

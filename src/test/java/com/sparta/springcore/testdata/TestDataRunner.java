@@ -1,3 +1,5 @@
+package com.sparta.springcore.testdata;
+
 import com.sparta.springcore.dto.ItemDto;
 import com.sparta.springcore.model.Folder;
 import com.sparta.springcore.model.Product;
